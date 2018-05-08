@@ -196,7 +196,7 @@ void MessageHandler::sendMessage(QString toJid, QString body)
 	const QString id = QString::fromStdString(message.id());
 	const QString fromJid = QString::fromStdString(client->jid().bare());
 
-	emit messageModel->addMessageRequested(fromJid, toJid, timestamp, body, id, true); 
+	emit messageModel->addMessageRequested(fromJid, toJid, timestamp, body, id, true);
 
 	// XEP-0184: Message Delivery Receipts
 	// request a delivery receipt from the other client
